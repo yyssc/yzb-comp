@@ -51,6 +51,46 @@ Ensure packages are installed with correct version numbers by running:
 
 - run `npm run version:patch` for patch release.
 
+## 各种参照组件
+
+可以供使用的参照组件都在`src/财务平台/components/`目录下。
+
+- 科目表(refCode: accsubjectchart)
+  - `AccSubjectChartRefer` 科目参照组件
+  - `SimpleAccSubjectChartRefer` 科目参照组件 - 简单
+- 科目表(refCode: subjectchart)
+  - `SubjectChartRefer` 科目参照组件
+  - `SimpleSubjectChartRefer` 科目参照组件 - 简单
+- 科目(refCode: accsubject)
+  - `AccSubjectRefer` 科目参照组件
+  - `SimpleAccSubjectRefer` 科目参照组件 - 简单
+  - `FilterAccSubjectRefer` 科目参照组件 - 两个参照，由科目表来过滤科目
+- 科目(refCode: subject)
+  - `SimpleSubjectRefer` 科目参照组件 - 简单
+  - `FilterSubjectRefer` 科目参照组件 - 两个参照，由科目表来过滤科目
+
+派生关系
+
+- Refers
+  - ReferList
+    - BaseSubjectRefer
+      - SimpleSubjectRefer
+      - SimpleAccSubjectRefer
+      - SimpleSubjectChartRefer
+      - SimpleAccSubjectChartRefer
+
+请不要直接使用`Base*Refer`，比如`BaseSubjectRefer`，这些是基类。如果想使用默认组件，请直接使用
+`Simple*Refer`，比如`SimpleSubjectRefer`。
+
+组装关系
+
+- FilterSubjectRefer
+  - SimpleSubjectChartRefer
+  - SimpleSubjectRefer
+- FilterAccSubjectRefer
+  - SimpleAccSubjectChartRefer
+  - SimpleAccSubjectRefer
+
 [package-url]: https://npmjs.org/package/yzb-comp
 [npm-version-svg]: http://versionbadg.es/yyssc/yzb-comp.svg
 [travis-svg]: https://travis-ci.org/yyssc/yzb-comp.svg
