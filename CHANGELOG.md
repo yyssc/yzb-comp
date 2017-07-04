@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.1.2
+
+- [new] remove peer deps react-addons-shallow-compare
+
 ## v0.1.1
 
 - [fix] Moudule not found ([#1](https://github.com/yyssc/yzb-comp/issues/1))
