@@ -13,11 +13,15 @@ import ReferList from './ReferList';
  *
  * 特色：
  * - 默认refCode是subject
- * - 下来菜单项是code+name
+ * - 下拉菜单项是code+name
  */
 
 const propTypes = {
   disabled: PropTypes.bool,
+  /**
+   * 参照查询的过滤条件，比如：`{accsubjectchart:09248BF5-23B2-4EC2-8D22-75A5D8739A9C}`
+   * 用法参照`FilterAccSubjectRefer`组件
+   */
   filterCondition: PropTypes.string,
   /**
    * 参照值发生改变的时候
@@ -68,6 +72,7 @@ export default function BaseSubjectRefer({
     refType: 'table',
     fields: ['id', 'code', 'name'],
     displayFields: ['id', 'code', 'name'],
+    orderby: 'code asc',
   };
   if (filterCondition) {
     referConditions.filterCondition = filterCondition;
