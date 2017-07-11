@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.1.3
+
+- [fix] FICLOUD-1065 科目参照下拉菜单按照编码进行排序 ([#2](https://github.com/yyssc/yzb-comp/issues/2))
+
 ## v0.1.2
 
 - [new] remove peer deps react-addons-shallow-compare
