@@ -1,6 +1,6 @@
 {
   "name": "yzb-comp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Yonyou Cloud Components built with React",
   "main": "index.js",
   "scripts": {
