@@ -81,7 +81,7 @@ export default class FilterAccSubjectRefer extends Component {
         <SimpleAccSubjectRefer
           referListRef={(c) => { this.referListRef = c; }}
           referDataUrl={this.props.referDataUrl}
-          filterCondition={`{accsubjectchart:${this.state.accSubjectChartId}}`}
+          filterCondition={`{"accsubjectchart":"${this.state.accSubjectChartId}"}`}
           disabled={this.state.accSubjectChartId === null}
           selected={this.state.accSubjectChartId === null
             ? null
