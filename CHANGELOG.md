@@ -1,4 +1,8 @@
 # Change Log
+## v0.1.5
+
+- [fix] ssc-refer改为ssc-refer
+
 ## v0.1.4
 
 - [fix] 科目参照科目表过滤条件格式修改
