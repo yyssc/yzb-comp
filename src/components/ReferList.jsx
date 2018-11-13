@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Refers } from 'ssc-refer2';
+import { Refers } from 'ssc-refer';
 
 /**
  * 对参照组件进行封装
@@ -53,7 +53,7 @@ export default class ReferList extends React.Component {
           // c is null when parent is stateless/functional component
           // console.log(c);
           if (c) {
-            // 由于ssc-refer2的Refers组件使用了react-clickoutside这个HOC
+            // 由于ssc-refer的Refers组件使用了react-clickoutside这个HOC
             // 所以只能通过c.getInstance()来获取reference to component
             // 比如调用Refers组件提供的clear()方法：
             // ```js

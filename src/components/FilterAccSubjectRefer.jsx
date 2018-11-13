@@ -47,7 +47,7 @@ export default class FilterAccSubjectRefer extends Component {
       leftValue: selected,
       accSubjectChartId: selected ? selected.id : null,
     });
-    // 由于ssc-refer2组件更新selected属性的时候有一个bug，导致之前selected=Array(1)
+    // 由于ssc-refer组件更新selected属性的时候有一个bug，导致之前selected=Array(1)
     // 然后selected=Array(0)的时候，UI上的文本框内仍然有内容
     // 所以必须通过ref形式直接调用clear()方法
     if (!selected) {
